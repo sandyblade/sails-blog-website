@@ -5,10 +5,13 @@
   "description": "a Sails application",
   "keywords": [],
   "dependencies": {
+    "@sailshq/lodash": "^3.10.6",
+    "backend": "file:",
     "sails": "^1.5.11",
+    "sails-hook-dotenv": "^0.1.1",
     "sails-hook-orm": "^4.0.3",
     "sails-hook-sockets": "^3.0.0",
-    "@sailshq/lodash": "^3.10.6"
+    "sails-mysql": "3.0.1"
   },
   "devDependencies": {
     "eslint": "5.16.0"
