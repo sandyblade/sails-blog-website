@@ -7,15 +7,18 @@
   "dependencies": {
     "@sailshq/lodash": "^3.10.6",
     "backend": "file:",
+    "bcrypt": "^5.1.1",
     "dotenv": "^16.4.5",
     "sails": "^1.5.11",
     "sails-hook-dotenv": "^0.1.1",
     "sails-hook-orm": "^4.0.3",
     "sails-hook-sockets": "^3.0.0",
     "sails-mysql": "3.0.1",
+    "slugify": "^1.6.6",
     "uuid": "^10.0.0"
   },
   "devDependencies": {
+    "@faker-js/faker": "^8.4.1",
     "eslint": "5.16.0"
   },
   "scripts": {
