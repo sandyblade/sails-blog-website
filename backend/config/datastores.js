@@ -13,6 +13,8 @@
  * https://sailsjs.com/config/datastores
  */
 
+require("dotenv").config();
+
 module.exports.datastores = {
 
 
@@ -48,9 +50,8 @@ module.exports.datastores = {
     *    (See https://sailsjs.com/config/datastores for help.)                 *
     *                                                                          *
     ***************************************************************************/
-    adapter: config.local.db_adapter,
-    url: config.local.db_dsn,
-
+    adapter: process.env.DB_ADAPTER,
+    url: process.env.DB_DSN
   },
 
 

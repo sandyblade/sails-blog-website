@@ -7,11 +7,13 @@
   "dependencies": {
     "@sailshq/lodash": "^3.10.6",
     "backend": "file:",
+    "dotenv": "^16.4.5",
     "sails": "^1.5.11",
     "sails-hook-dotenv": "^0.1.1",
     "sails-hook-orm": "^4.0.3",
     "sails-hook-sockets": "^3.0.0",
-    "sails-mysql": "3.0.1"
+    "sails-mysql": "3.0.1",
+    "uuid": "^10.0.0"
   },
   "devDependencies": {
     "eslint": "5.16.0"
