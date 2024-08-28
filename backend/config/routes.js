@@ -10,5 +10,6 @@
 
 module.exports.routes = {
 
+  'get /api/account/detail': 'AccountController.me',
 
 };
