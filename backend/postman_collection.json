@@ -1,7 +1,7 @@
 {
 	"info": {
-		"_postman_id": "c5ba42e9-bfae-436e-a29d-210001e56287",
-		"name": "Lumen REST API",
+		"_postman_id": "4a0f8c4e-a36f-43ff-9813-6ac63757199f",
+		"name": "Sails REST API",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
 		"_exporter_id": "17401019"
 	},
@@ -16,7 +16,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"email\":\"josianne06@example.net\",\r\n    \"password\":\"P@ssw0rd!123\"\r\n}",
+							"raw": "{\r\n    \"email\":\"haylee43@yahoo.com\",\r\n    \"password\":\"P@ssw0rd!123\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -43,7 +43,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"email\":\"sandyandryanto@gmail001.com\",\r\n    \"password\":\"P@ssw0rd!123\",\r\n    \"password_confirmation\":\"P@ssw0rd!123\"\r\n}",
+							"raw": "{\r\n    \"email\":\"sandyandryanto@gmail002.com\",\r\n    \"password\":\"P@ssw0rd!123\",\r\n    \"password_confirm\":\"P@ssw0rd!123\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -69,14 +69,14 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{baseURL}}api/auth/confirm/cc6f69d5-403c-3fbf-b2e4-34d25a510827",
+							"raw": "{{baseURL}}api/auth/confirm/09b9ab93-d13f-4cfd-857a-3a92ace0ee9b",
 							"host": [
 								"{{baseURL}}api"
 							],
 							"path": [
 								"auth",
 								"confirm",
-								"cc6f69d5-403c-3fbf-b2e4-34d25a510827"
+								"09b9ab93-d13f-4cfd-857a-3a92ace0ee9b"
 							]
 						}
 					},
@@ -89,7 +89,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"email\":\"sandyandryanto@gmail003.com\"\r\n}",
+							"raw": "{\r\n    \"email\":\"sandyandryanto@gmail001.com\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -117,7 +117,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"email\":\"sandyandryanto@gmail003.com\",\r\n    \"password\":\"P@ssw0rd!123\",\r\n    \"password_confirmation\":\"P@ssw0rd!123\"\r\n}",
+							"raw": "{\r\n    \"email\":\"sandyandryanto@gmail001.com\",\r\n    \"password\":\"P@ssw0rd!123\",\r\n    \"password_confirm\":\"P@ssw0rd!123\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -125,7 +125,7 @@
 							}
 						},
 						"url": {
-							"raw": "{{baseURL}}api/auth/email/reset/44f45b78-dca1-3056-95d5-d7e62b6ced7f",
+							"raw": "{{baseURL}}api/auth/email/reset/2fe7824a-87c3-4364-9289-ce19ca10373e",
 							"host": [
 								"{{baseURL}}api"
 							],
@@ -133,7 +133,7 @@
 								"auth",
 								"email",
 								"reset",
-								"44f45b78-dca1-3056-95d5-d7e62b6ced7f"
+								"2fe7824a-87c3-4364-9289-ce19ca10373e"
 							]
 						}
 					},

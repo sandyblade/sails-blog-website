@@ -9,7 +9,10 @@
  */
 
 module.exports.routes = {
-
+  'post /api/auth/login': 'AuthController.login',
+  'post /api/auth/register': 'AuthController.register',
+  'get /api/auth/confirm/:token': 'AuthController.confirm',
+  'post /api/auth/email/forgot': 'AuthController.forgot',
+  'post /api/auth/email/reset/:token': 'AuthController.reset',
   'get /api/account/detail': 'AccountController.me',
-
 };

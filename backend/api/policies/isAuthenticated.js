@@ -1,11 +1,12 @@
 /**
- * isAuthenticated
+ * This file is part of the Sandy Andryanto Company Profile Website.
  *
- * @module      :: Policy
- * @description :: Simple policy to require an authenticated user, or else redirect to login page
- *                 Looks for an Authorization header bearing a valid JWT token
- * @docs        :: http://sailsjs.org/#!documentation/policies
+ * @author     Sandy Andryanto <sandy.andryanto404@gmail.com>
+ * @copyright  2024
  *
+ * For the full copyright and license information,
+ * please view the LICENSE.md file that was distributed
+ * with this source code.
  */
 
 module.exports = async function (req, res, next){

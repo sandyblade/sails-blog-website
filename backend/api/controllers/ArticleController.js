@@ -1,12 +1,16 @@
 /**
- * ArticleController
+ * This file is part of the Sandy Andryanto Company Profile Website.
  *
- * @description :: Server-side actions for handling incoming requests.
- * @help        :: See https://sailsjs.com/docs/concepts/actions
+ * @author     Sandy Andryanto <sandy.andryanto404@gmail.com>
+ * @copyright  2024
+ *
+ * For the full copyright and license information,
+ * please view the LICENSE.md file that was distributed
+ * with this source code.
  */
 
 module.exports = {
-  
+
 
 };
 

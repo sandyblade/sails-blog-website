@@ -1,8 +1,12 @@
 /**
- * Viewer.js
+ * This file is part of the Sandy Andryanto Company Profile Website.
  *
- * @description :: A model definition represents a database table/collection.
- * @docs        :: https://sailsjs.com/docs/concepts/models-and-orm/models
+ * @author     Sandy Andryanto <sandy.andryanto404@gmail.com>
+ * @copyright  2024
+ *
+ * For the full copyright and license information,
+ * please view the LICENSE.md file that was distributed
+ * with this source code.
  */
 
 module.exports = {
@@ -16,6 +20,12 @@ module.exports = {
       columnType: 'bigint unsigned',
       autoIncrement: true
    },
+    user: {
+      model: 'user'
+    },
+    article: {
+      model: 'article'
+    },
     status: {
       type: 'number',
       defaultsTo: 0,
@@ -34,13 +44,6 @@ module.exports = {
       columnName: "updated_at",
       columnType: "datetime",
       autoMigrations: { index: true }
-    },
-    // Relations
-    user: {
-      model: 'user'
-    },
-    article: {
-      model: 'article'
     }
   },
 
