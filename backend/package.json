@@ -10,6 +10,7 @@
     "bcrypt": "^5.1.1",
     "dotenv": "^16.4.5",
     "jsonwebtoken": "^9.0.2",
+    "moment": "^2.30.1",
     "sails": "^1.5.11",
     "sails-hook-dotenv": "^0.1.1",
     "sails-hook-orm": "^4.0.3",

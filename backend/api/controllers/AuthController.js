@@ -11,6 +11,7 @@
 
 const bcrypt = require('bcrypt');
 const jwt = require('jsonwebtoken');
+const moment = require('moment');
 const { faker } = require('@faker-js/faker');
 
 require("dotenv").config();
@@ -43,7 +44,7 @@ module.exports = {
        return res.status(401).json({ message: 'You need to confirm your account. We have sent you an activation code, please check your email.!' });
     }
 
-    let token = jwt.sign({user}, process.env.JWT_KEY, { expiresIn: '1h'});
+    let token = jwt.sign({user}, process.env.JWT_KEY, { expiresIn: '24h'});
 
     await Activity.create({
         user: user.id,
@@ -53,7 +54,7 @@ module.exports = {
         updatedAt: new Date()
     });
 
-    return res.json({ message: 'ok', data: { token: token, expiresIn: '1h' } });
+    return res.json({ message: 'ok', data: { token: token, expiresIn: moment().add(24, 'hours').format('YYYY-MM-DD HH:mm:ss') } });
   },
 
   register: async function (req, res) {

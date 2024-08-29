@@ -45,8 +45,11 @@ module.exports = {
       if (!token) return exits.invalid()
       // if there is something, attempt to parse it as a JWT token
       return jwt.verify(token, process.env.JWT_KEY, async function (err, payload) {
-        if (err || !payload.sub) return exits.invalid()
-        var user = await User.findOne(payload.sub)
+        if (err || !payload.user) return exits.invalid()
+        var user = await User.findOne({
+            where: {id : payload.user.id},
+            omit: ['password', 'resetToken', 'confirmToken', 'confirmed',  'createdAt', 'updatedAt']
+         });
         if (!user) return exits.invalid()
         // if it got this far, everything checks out, success
         req.user = user

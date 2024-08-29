@@ -1,9 +1,9 @@
 {
 	"info": {
-		"_postman_id": "4a0f8c4e-a36f-43ff-9813-6ac63757199f",
+		"_postman_id": "737b985c-2822-4cdd-8ef6-4c98b35c4391",
 		"name": "Sails REST API",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
-		"_exporter_id": "17401019"
+		"_exporter_id": "20338099"
 	},
 	"item": [
 		{
@@ -16,7 +16,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"email\":\"haylee43@yahoo.com\",\r\n    \"password\":\"P@ssw0rd!123\"\r\n}",
+							"raw": "{\r\n    \"email\":\"stefanie_greenholt@hotmail.com\",\r\n    \"password\":\"P@ssw0rd!123\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -169,7 +169,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"email\": \"josianne06@example.net\",\r\n    \"phone\": \"333333\",\r\n    \"image\": null,\r\n    \"first_name\": \"Larue\",\r\n    \"last_name\": \"DuBuque\",\r\n    \"gender\": \"M\",\r\n    \"country\": \"Haiti\",\r\n    \"facebook\": \"slueilwitz\",\r\n    \"instagram\": \"hal.schmeler\",\r\n    \"twitter\": \"fhickle\",\r\n    \"linked_in\": \"hhoeger\",\r\n    \"address\": \"90033 Abe Ports Apt. 283\",\r\n    \"about_me\": \"Repellendus qui excepturi sapiente blanditiis debitis. Laboriosam eius facilis sunt quia. Qui earum et adipisci iusto delectus est. Voluptatem ut qui sit et odit quia odio doloribus.\"\r\n}",
+							"raw": "{\r\n    \"email\": \"kenneth_mcglynn@hotmail.com\",\r\n    \"phone\": \"377-470-8905 x691\",\r\n    \"image\": null,\r\n    \"firstName\": \"Sandy\",\r\n    \"lastName\": \"Andryanto\",\r\n    \"gender\": \"M\",\r\n    \"country\": \"Togo\",\r\n    \"facebook\": \"Jaime.Koch\",\r\n    \"instagram\": \"Herminio60\",\r\n    \"twitter\": \"Erin68\",\r\n    \"linkedIn\": \"Lester83\",\r\n    \"jobTitle\": \"Principal Infrastructure Architect\",\r\n    \"address\": \"913 Bartoletti Shores\",\r\n    \"aboutMe\": \"Inflammatio verus error audax aperte ullus. Pauci usus aliqua. Aiunt timidus suffragium degero consectetur velit brevis aeneus torrens.\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -196,7 +196,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"current_password\":\"P@ssw0rd!123\",\r\n    \"password\":\"P@ssw0rd!123\",\r\n    \"password_confirmation\":\"P@ssw0rd!123\"\r\n}",
+							"raw": "{\r\n    \"currentPassword\":\"P@ssw0rd!123xx\",\r\n    \"password\":\"P@ssw0rd!123\",\r\n    \"passwordConfirm\":\"P@ssw0rd!123\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -611,7 +611,7 @@
 		"bearer": [
 			{
 				"key": "token",
-				"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjgwMDAvYXBpL2F1dGgvbG9naW4iLCJpYXQiOjE3MjQ2NTc5NzgsImV4cCI6MTcyNDY2MTU3OCwibmJmIjoxNzI0NjU3OTc4LCJqdGkiOiJsYmluYUNaRXh1UkNScXFlIiwic3ViIjoiNSIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.WhYifr0aAizf3ira7RRwgaqADkXkcp2omxyFo9_20j8",
+				"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoxLCJlbWFpbCI6InN0ZWZhbmllX2dyZWVuaG9sdEBob3RtYWlsLmNvbSIsInBob25lIjoiMjEwLTkyOS04NDA1IiwicGFzc3dvcmQiOiIkMmIkMTAkbmNySU5hYTRISTZmcTNFSlBuWTNRZWIzSUt0QzVKS0pyOUN4QjBCYkRmaWJ0MXlLbzljQnkiLCJpbWFnZSI6bnVsbCwiZmlyc3ROYW1lIjoiTmFtZSIsImxhc3ROYW1lIjoiQmFycm93cyIsImdlbmRlciI6Ik0iLCJjb3VudHJ5IjoiVW5pdGVkIEFyYWIgRW1pcmF0ZXMiLCJmYWNlYm9vayI6IkNyeXN0ZWxfRGVja293IiwiaW5zdGFncmFtIjoiSG93YXJkMjciLCJ0d2l0dGVyIjoiQWJiaWU1OSIsImxpbmtlZEluIjoiQmlsbGllX0dyYWhhbTQwIiwiam9iVGl0bGUiOiJDaGllZiBBY2NvdW50YWJpbGl0eSBPZmZpY2VyIiwiYWRkcmVzcyI6Ijc2NyBTY2hhbWJlcmdlciBGbGF0IiwiYWJvdXRNZSI6IkNydXIgYXJndW1lbnR1bSB0aW1vciBhaXVudCBlbGlnZW5kaSBvZGl0LiBDdWxwbyBjb2VyY2VvIHN1Yml1bmdvIGRlcHJpbW8gY3VyYSB0YWN0dXMgZW5pbSBuaWhpbCBiYXJkdXMgZXQuIEFwdHVzIHZvbHViaWxpcyBjb25pdXJhdGlvIHF1b2QgbWFnbmFtLiIsInJlc2V0VG9rZW4iOm51bGwsImNvbmZpcm1Ub2tlbiI6bnVsbCwiY29uZmlybWVkIjoxLCJjcmVhdGVkQXQiOiIyMDI0LTA4LTI4VDE1OjEyOjM0LjAwMFoiLCJ1cGRhdGVkQXQiOiIyMDI0LTA4LTI4VDE1OjEyOjM0LjAwMFoifSwiaWF0IjoxNzI0ODU4NDMwLCJleHAiOjE3MjQ5NDQ4MzB9.egjB0fZRg2sLqqIXXr-3X5fYKJZmQ4Rf5hg1ygSDG14",
 				"type": "string"
 			}
 		]
