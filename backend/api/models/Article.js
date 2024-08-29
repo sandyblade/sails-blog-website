@@ -27,7 +27,9 @@ module.exports = {
 
     image: {
       type: 'string',
-      autoMigrations: { index: true }
+      columnType: 'varchar(255)',
+      autoMigrations: { index: true },
+      allowNull: true,
     },
 
     slug: {
@@ -47,17 +49,17 @@ module.exports = {
 
     content: {
       type: 'string',
-      columnType: 'longtext',
+      columnType: 'longtext'
     },
 
     categories: {
       type: 'json',
-      columnType: 'longtext',
+      columnType: 'longtext'
     },
 
     tags: {
       type: 'json',
-      columnType: 'longtext',
+      columnType: 'longtext'
     },
 
     totalViewer  : {

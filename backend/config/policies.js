@@ -8,6 +8,8 @@
  * https://sailsjs.com/docs/concepts/policies
  */
 
+const CommentController = require("../api/controllers/CommentController");
+
 module.exports.policies = {
 
   /***************************************************************************
@@ -23,6 +25,18 @@ module.exports.policies = {
   },
   NotificationController: {
     '*': 'isAuthenticated'
+  },
+  ArticleController: {
+    'create': 'isAuthenticated',
+    'update': 'isAuthenticated',
+    'read': 'isAuthenticated',
+    'remove': 'isAuthenticated',
+    'user': 'isAuthenticated',
+    'words': 'isAuthenticated'
+  },
+  CommentController: {
+     'create': 'isAuthenticated',
+     'remove': 'isAuthenticated'
   }
 
 };

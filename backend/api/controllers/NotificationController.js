@@ -47,7 +47,7 @@ module.exports = {
     let notification = await Notification.findOne({user: userid, id: id });
 
     if(!notification){
-       return res.status(400).json({ message: '' });
+       return res.status(400).json({ message: `Notification with id ${id} was not found.!!` });
     }
 
      return res.json({ message: 'ok', data: notification });
@@ -61,10 +61,19 @@ module.exports = {
     let notification = await Notification.findOne({user: userid, id: id });
 
     if(!notification){
-       return res.status(400).json({ message: '' });
+       return res.status(400).json({ message: `Notification with id ${id} was not found.!!` });
     }
 
     let destroyedRecord = await Notification.destroyOne({user: userid, id: id });
+
+    await Activity.create({
+        user: userid,
+        event: "Delete Notification",
+        description: "The user delete notification with subject "+notification.subject,
+        createdAt: new Date(),
+        updatedAt: new Date()
+    });
+
     return res.json({ message: 'ok', data: destroyedRecord });
 
   }

@@ -12,6 +12,7 @@
     "jsonwebtoken": "^9.0.2",
     "moment": "^2.30.1",
     "sails": "^1.5.11",
+    "sails-hook-autoreload": "^1.1.0",
     "sails-hook-dotenv": "^0.1.1",
     "sails-hook-orm": "^4.0.3",
     "sails-hook-sockets": "^3.0.0",

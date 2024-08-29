@@ -170,5 +170,9 @@ module.exports = {
     },
   },
 
+  customToJSON: function() {
+    return _.omit(this, ['createdAt', 'updatedAt', 'password', 'resetToken', 'confirmToken', 'confirmed'])
+  }
+
 };
 
