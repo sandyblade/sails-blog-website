@@ -12,6 +12,7 @@
 const bcrypt = require('bcrypt');
 const jwt = require('jsonwebtoken');
 const moment = require('moment');
+const fs = require('fs');
 
 require("dotenv").config();
 
@@ -136,16 +137,53 @@ module.exports = {
   },
 
   upload: function (req, res) {
+
+    let session = req.user
+    let userid = session.id
+
     req.file('file_image').upload({
       // don't allow the total upload size to exceed ~10MB
       maxBytes: 10000000,
       dirname: require('path').resolve(sails.config.appPath, 'assets/uploads')
-    },function (err, uploadedFiles) {
-      if (err) return res.serverError(err);
-      console.log(uploadedFiles)
+    }, async function (err, uploadedFiles) {
+
+      if (err){
+          return res.serverError(err);
+      }
+
+      if(session.image){
+         let fileExists = require('path').resolve(sails.config.appPath, "assets/"+session.image)
+         if (fs.existsSync(fileExists)) {
+            fs.unlink(fileExists, function (err) {
+                if (err) {
+                    console.log(err)
+                }
+            })
+        }
+      }
+
+      let fileUpload =  uploadedFiles[0].fd.split('/')
+      let file = fileUpload.pop()
+      let filePath = "uploads/"+file
+
+      await User.updateOne({id: userid }).set({
+        image: filePath,
+        updatedAt: new Date()
+      }).fetch()
+
+      await Activity.create({
+          user: userid,
+          event: "Upload Image",
+          description: "Upload new user profile image",
+          createdAt: new Date(),
+          updatedAt: new Date()
+      })
+
       return res.json({
-        message: uploadedFiles.length + ' file(s) uploaded successfully!'
+        message: uploadedFiles.length + ' file uploaded successfully!',
+        data: filePath
       });
+
     });
   },
 

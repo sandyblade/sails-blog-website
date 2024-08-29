@@ -20,6 +20,9 @@ module.exports.policies = {
   // '*': true,
   AccountController: {
     '*': 'isAuthenticated'
+  },
+  NotificationController: {
+    '*': 'isAuthenticated'
   }
 
 };

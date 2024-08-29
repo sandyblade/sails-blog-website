@@ -20,4 +20,7 @@ module.exports.routes = {
   'post /api/account/upload': 'AccountController.upload',
   'post /api/account/token': 'AccountController.refresh',
   'get /api/account/activity': 'AccountController.activity',
+  'get /api/notification/list': 'Notification.list',
+  'get /api/notification/read/:id': 'Notification.read',
+  'delete /api/notification/remove:/:id': 'Notification.remove',
 };
