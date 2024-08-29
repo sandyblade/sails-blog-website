@@ -15,7 +15,6 @@
     "sails-hook-autoreload": "^1.1.0",
     "sails-hook-dotenv": "^0.1.1",
     "sails-hook-orm": "^4.0.3",
-    "sails-hook-sockets": "^3.0.0",
     "sails-mysql": "3.0.1",
     "slugify": "^1.6.6",
     "uuid": "^10.0.0"
