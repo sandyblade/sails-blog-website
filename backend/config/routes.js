@@ -18,6 +18,6 @@ module.exports.routes = {
   'post /api/account/update': 'AccountController.update',
   'post /api/account/password': 'AccountController.password',
   'post /api/account/upload': 'AccountController.upload',
-  'post /api/account/refresh': 'AccountController.refresh',
+  'post /api/account/token': 'AccountController.refresh',
   'get /api/account/activity': 'AccountController.activity',
 };

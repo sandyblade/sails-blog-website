@@ -136,7 +136,17 @@ module.exports = {
   },
 
   upload: function (req, res) {
-    return res.json({ message: 'ok', data: req.user });
+    req.file('file_image').upload({
+      // don't allow the total upload size to exceed ~10MB
+      maxBytes: 10000000,
+      dirname: require('path').resolve(sails.config.appPath, 'assets/uploads')
+    },function (err, uploadedFiles) {
+      if (err) return res.serverError(err);
+      console.log(uploadedFiles)
+      return res.json({
+        message: uploadedFiles.length + ' file(s) uploaded successfully!'
+      });
+    });
   },
 
   refresh: function (req, res) {
@@ -145,8 +155,32 @@ module.exports = {
     return res.json({ message: 'ok', data: { token: token, expiresIn: moment().add(24, 'hours').format('YYYY-MM-DD HH:mm:ss') } });
   },
 
-  activity: function (req, res) {
-    return res.json({ message: 'ok', data: req.user });
+  activity: async function (req, res) {
+
+    let user = req.user
+    let page = req.query.page || 1;
+    let limit = req.query.limit || 10;
+    let total = await Activity.count({ user: user.id });
+    let offset = ((page-1)*limit)
+    let orderBy = req.query.order || "id"
+    let orderDir = req.query.dir || "desc"
+    let searchValue = req.query.search || ""
+    let filter = { user: user.id  }
+
+    if(searchValue.length > 0){
+        filter["or"] = [
+            {
+              event: { 'startsWith': searchValue }
+            },
+            {
+              description: { 'startsWith': searchValue }
+            }
+        ]
+    }
+
+    let list = await Activity.find(filter).limit(limit).skip(offset).sort(`${orderBy} ${orderDir}`);
+
+    return res.json({ message: 'ok', data: { list: list, total: total } });
   },
 
 };
